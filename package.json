@@ -1,7 +1,7 @@
 {
-  "name": "stockpile-arguments",
+  "name": "stockpile",
   "version": "1.0.0",
-  "description": "",
+  "description": "Helps transfer parameters (including functions) for functions between environments: browser, node.js, etc.",
   "main": "lib",
   "scripts": {
     "test": "ava"
@@ -11,12 +11,8 @@
     "ava": "^0.4.2",
     "babel": "^5.8.29",
     "chai": "^3.1.0",
-    "gulp-ava": "^0.3.0",
-    "gulp-debug": "^2.1.2",
-    "mocha": "^2.2.5",
     "sigh": "^0.12.22",
     "sigh-babel": "^0.11.6",
-    "sigh-mocha": "^0.1.2",
     "sigh-process": "0.0.1"
   },
   "dependencies": {

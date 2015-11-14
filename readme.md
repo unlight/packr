@@ -1,7 +1,10 @@
-INSTALL
--------
-1. `npm i -g parallelshell`
+packr
+-----
+Serialize/unserialize data (including functions).
+Helps transfer parameters for functions between environments.
 
-
-http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/
-http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
+WHY?
+----
+Maybe helpful for:
+* https://github.com/segmentio/nightmare
+* https://github.com/ohjames/process-pool
