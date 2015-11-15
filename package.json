@@ -1,6 +1,6 @@
 {
   "name": "packr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Serialize/unserialize data (including functions).",
   "main": "lib",
   "scripts": {

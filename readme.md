@@ -18,7 +18,7 @@ var data = [
 	"a",
 	(b) => b
 ];
-var serialized = serialize(data);
+var serialized = serialize(...data);
 var [num, str, func] = deserialize(serialized);
 console.log(num, str); // 1, a
 console.log(func("Hello")); // Hello
