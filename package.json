@@ -1,7 +1,7 @@
 {
-  "name": "stockpile",
+  "name": "packr",
   "version": "1.0.0",
-  "description": "Helps transfer parameters (including functions) for functions between environments: browser, node.js, etc.",
+  "description": "Serialize/unserialize data (including functions).",
   "main": "lib",
   "scripts": {
     "test": "ava"
