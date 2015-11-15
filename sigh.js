@@ -12,11 +12,16 @@ module.exports = function(pipelines) {
 
 	pipelines["tests"] = [
 		glob("{src,test}/*.js"),
-		pipeline({ activate: true }, "ava", { activate: true }, "eslint"),
+		// pipeline({ activate: true }, "ava", { activate: true }, "eslint"),
+		pipeline({ activate: true }, "mocha"),
 	];
 
 	pipelines.explicit["ava"] = [
 		process("ava.cmd")
+	];
+
+	pipelines.explicit["mocha"] = [
+		mocha({ files: "test/**/*.spec.js" }) 
 	];
 
 	pipelines.explicit["eslint"] = [

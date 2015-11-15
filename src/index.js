@@ -2,26 +2,17 @@ import Serializer from "./serializer";
 import PrimitiveSerializer from "./primitive.serializer";
 import FunctionSerializer from "./function.serializer";
 
-var serializer = new Serializer();
-serializer.addNext(new FunctionSerializer());
-serializer.addNext(new PrimitiveSerializer());
+var s = new Serializer();
+s.addNext(new FunctionSerializer());
+s.addNext(new PrimitiveSerializer()); // Last item in chain.
 
-var assignedSerialize = serializer.serialize.bind(serializer);
-var assignedDeserialize = serializer.deserialize.bind(serializer);
-
-function transform(func, args) {
-	var result = new Array(args.length);
-	for (var i = 0; i < args.length; i++) {
-		var value = args[i];
-		result[i] = func(value);
-	}
-	return result;
-}
+var funcSerialize = s.serialize.bind(s);
+var funcDeserialize = s.deserialize.bind(s);
 
 export function serialize() {
-	return transform(assignedSerialize, arguments);
+	return [...arguments].map(funcSerialize);
 }
 
-export function deserialize() {
-	return transform(assignedDeserialize, arguments);
+export function deserialize(args) {
+	return args.map(funcDeserialize);
 }
