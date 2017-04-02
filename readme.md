@@ -1,5 +1,7 @@
 packr
 -----
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/unlight/packr.svg)](https://greenkeeper.io/)
 Serialize/unserialize data (including functions).
 Helps transfer parameters for functions between environments.
 
